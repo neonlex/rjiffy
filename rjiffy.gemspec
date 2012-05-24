@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "rjiffy"
   s.version     = Rjiffy::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Frank Mueller"]
-  s.email       = ["frank@heidjer.info"]
+  s.authors     = ["Frank Mueller", "Daniel Spangenberg"]
+  s.email       = ["frank@heidjer.info", "daniel.spangenberg@parcydo.com"]
   s.homepage    = ""
   s.summary     = "Rjiffy"
   s.description = "Ruby Wrapper for the jiffybox.de API"

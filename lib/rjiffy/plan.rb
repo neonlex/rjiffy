@@ -1,13 +1,13 @@
 module Rjiffy
   class Plan < Hashie::Mash
     class << self
-      def all
-        Request.get_data("/plans").collect {|plan| new(plan[1])}
+      def all(token = nil)
+        Request.get_data('/plans', token).collect { |plan| new(plan[1]) }
       end
 
-      def find(id_or_name)
+      def find(id_or_name, token = nil)
         escaped_id_or_name = URI.escape(id_or_name.to_s)
-        new(Request.get_data("/plans/#{escaped_id_or_name}"))
+        new(Request.get_data("/plans/#{escaped_id_or_name}", token))
       end
     end
   end

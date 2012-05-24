@@ -3,8 +3,8 @@ module Rjiffy
   require 'hashie'
 
   class << self
-    def backups
-      Request.get_data("/backups").collect {|backup| Backup.new(backup[1])}
+    def backups(token = nil)
+      Request.get_data('/backups', token).collect { |backup| Backup.new(backup[1]) }
     end
   end
 

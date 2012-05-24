@@ -10,8 +10,8 @@ module Rjiffy
         yield self
       end
 
-      def base_uri
-        "https://api.jiffybox.de/#{token}/#{API_VERSION}".to_uri
+      def base_uri(options = {})
+        "https://api.jiffybox.de/#{options[:token] || token}/#{API_VERSION}".to_uri
       end
     end
 

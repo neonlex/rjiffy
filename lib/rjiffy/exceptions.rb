@@ -1,5 +1,4 @@
 module Rjiffy
-
-  class ApiResponseError < StandardError; end
-
+  class ApiResponseError < StandardError
+  end
 end
